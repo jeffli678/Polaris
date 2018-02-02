@@ -103,6 +103,11 @@ def _eel():
 def _static(path):
     return btl.static_file(path, root=root_path)
 
+@btl.route('/')
+def _static_2():
+    path = '/index.html'
+    return btl.static_file(path, root=root_path)
+
 @btl.get('/eel', apply=[wbs.websocket])
 def _websocket(ws):
     global _websockets
