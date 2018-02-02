@@ -2,16 +2,19 @@
 import eel
 
 global text
+text = 'https://www.google.com'
 
 web_app_options = {
-	'mode': "None", 
+	'mode': "None",
 	'port': 9600,
 }
 
 @eel.expose
-def update(new_text):
-    text = new_text
-    # print(new_text)
+def update(new_text = ''):
+    global text
+    if new_text and new_text != text:
+        text = new_text
+        # print(new_text)
     eel.show_qrcode(text)
 
 eel.init('web')
