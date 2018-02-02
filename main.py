@@ -4,7 +4,7 @@ import eel
 global text
 
 web_app_options = {
-	'mode': "None", #or "chrome"
+	'mode': "None", 
 	'port': 9600,
 }
 
