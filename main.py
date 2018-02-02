@@ -7,6 +7,7 @@ text = 'https://www.google.com'
 web_app_options = {
 	'mode': "None",
 	'port': 9600,
+    'host': '0.0.0.0'
 }
 
 @eel.expose
