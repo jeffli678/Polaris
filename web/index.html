@@ -5,16 +5,19 @@
   <script type="text/javascript" src="eel.js"></script>
   <script type="text/javascript" src="qrcode.min.js"></script>
 	<script type="text/javascript" src="main.js"></script>
-	<!-- <link rel="stylesheet" type="text/css" href="main.css"> -->
+	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
 <body>
 
   <div id="qrcode"></div>
   <br/>
-  <textarea rows="20" cols="100" id="text"></textarea>
+  <textarea rows="15" id="text"></textarea>
   <br/>
   <button id="update" onclick="update()">Update</button>
+  <button id="clear" onclick="clear_text()">Clear</button>
+  <button id="go" onclick="go()">Go</button>
+  <a id="link" target="_blank"></a>
 
 </body>
 

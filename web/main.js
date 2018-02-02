@@ -29,3 +29,16 @@ function update()
   eel.update(text);
   document.getElementById('text').focus();
 }
+
+function clear_text()
+{
+  document.getElementById('text').value = '';
+}
+
+function go()
+{
+  url = document.getElementById('text').value;
+  link_a = document.getElementById('link');
+  link_a.href = url;
+  link_a.click();
+}
