@@ -1,0 +1,25 @@
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name go.part3.me;
+
+        location /eel.js {
+                proxy_pass http://127.0.0.1:9700/eel.js;
+        }
+
+        location /eel {
+                proxy_pass http://127.0.0.1:9700/eel;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection "Upgrade";
+                proxy_send_timeout 1d;
+                proxy_read_timeout 1d;
+        }
+
+
+        location / {
+                proxy_pass http://127.0.0.1:9700/;
+        }
+
+}
